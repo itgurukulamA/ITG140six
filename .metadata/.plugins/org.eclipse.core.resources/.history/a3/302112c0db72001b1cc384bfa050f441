@@ -1,0 +1,27 @@
+package com.example.demo.jdbc;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+@RestController
+public class ServiceController {
+	@Autowired
+	ItemService obj;
+	@PostMapping("/aitem")
+	public String additem (@RequestBody Item item) {
+		String val=obj.addItem(item);
+		return val;
+	}
+	@PostMapping("/uitem")
+	public String updateitem(@RequestBody Item item) {
+		String val=obj.updateItem(item);
+		return val;
+	}
+	@PostMapping("/ditem")
+	public String deleteitem(@RequestBody Item item) {
+		String val=obj.deleteItems(item);
+		return val;
+	}
+}
+

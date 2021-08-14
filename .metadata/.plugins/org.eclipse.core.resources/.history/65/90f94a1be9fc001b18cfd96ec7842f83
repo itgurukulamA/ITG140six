@@ -1,0 +1,15 @@
+package com.example.demo.Sms;
+
+public class TempOTP { 
+	private int otp;
+
+	public int getPhno() {
+		return otp;
+	}
+
+	public void setPhno(int otp) {
+		this.otp = otp;
+	}
+	
+
+}

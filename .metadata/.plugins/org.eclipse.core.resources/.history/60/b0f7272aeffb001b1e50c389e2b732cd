@@ -1,0 +1,59 @@
+package com.example.demo.DatabaseConnection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController { 
+	@Autowired
+	StudentService obj;
+	@Autowired
+	JdbcTemplate jdbc;
+	@PostMapping("/istudent")
+	public String insertData(@RequestBody Student s) 
+	{
+		int j=obj.insert(s);
+		if(j>0)
+		{
+			return "Data Inserted Successfully";
+		}
+		else
+		{
+			return "Data is not inserted";
+		}
+	}
+    @PostMapping("/count")
+    public String findList(@RequestBody Student s)
+    { 
+    	String sql="select count(*) from itg140 where id=?";
+		@SuppressWarnings("deprecation")
+		int i=jdbc.queryForObject(sql, new Object[] {s.getId()},Integer.class);
+		if(i>0)
+		{
+			return "The Id already Exists please find Another id";
+		}
+		else {
+			int id=s.getId();
+			String name=s.getName();
+			String email=s.getEmail();
+			String phno=s.getPhoneNo(); 
+			String sql1="insert into itg140 values(?,?,?,?)"; 
+			int j=jdbc.update(sql1,id,name,email,phno);
+			if(j>0)
+			{
+				return "data inserted";
+			}
+			else
+			{
+				return "data is not inserted";
+			}
+		}
+    	
+    }
+    @PostMapping("/search")
+    public String searchById()
+}

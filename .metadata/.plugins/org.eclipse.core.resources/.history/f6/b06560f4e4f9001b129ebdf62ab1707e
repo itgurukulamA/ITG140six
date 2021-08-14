@@ -1,0 +1,20 @@
+package com.example.demo.ArithmeticOpusingSpbwebServices;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoExample {
+      
+      @RequestMapping("/")
+      public String displayString()
+      { 
+    	return "Hello Rajesh";
+      } 
+       
+      @RequestMapping("/add") 
+      public int Addition()
+      {
+    	  return 10+20;
+      }
+}

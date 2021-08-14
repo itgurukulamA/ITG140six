@@ -1,0 +1,7 @@
+package com.example.demo.Maths;
+
+public class Operations {
+	private int mes;
+	private int mss;
+
+}

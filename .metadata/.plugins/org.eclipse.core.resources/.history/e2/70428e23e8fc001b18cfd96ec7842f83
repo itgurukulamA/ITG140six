@@ -1,0 +1,15 @@
+package com.example.demo.Sms;
+
+public class Sms { 
+	private int phno;
+
+	public int getPhno() {
+		return phno;
+	}
+
+	public void setPhno(int phno) {
+		this.phno = phno;
+	}
+	
+
+}

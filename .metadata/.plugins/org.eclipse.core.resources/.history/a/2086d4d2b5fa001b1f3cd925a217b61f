@@ -1,0 +1,15 @@
+package com.example.demo.DatabaseConnection;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class StudentService { 
+	public int insert(Student s) 
+	{
+		int id=s.getId();
+		String name=s.getName();
+		String email=s.getEmail();
+		String phno=s.getPhoneNo();
+	}
+
+}

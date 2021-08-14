@@ -1,0 +1,36 @@
+package com.example.demo.DatabaseConnection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class StudentController { 
+	@Autowired
+	StudentService obj;
+	@Autowired
+	JdbcTemplate jdbc;
+	@PostMapping("/istudent")
+	public String insertData(@RequestBody Student s) 
+	{
+		int j=obj.insert(s);
+		if(j>0)
+		{
+			return "Data Inserted Successfully";
+		}
+		else
+		{
+			return "Data is not inserted";
+		}
+	}
+    @GetMapping("/count")
+    public int findList()
+    { 
+    	String sql="select count(*) from itg140";
+		return jdbc.queryForObject(sql,Integer.class);
+    	
+    }
+}

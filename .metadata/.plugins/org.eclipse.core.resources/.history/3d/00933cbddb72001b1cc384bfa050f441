@@ -1,0 +1,63 @@
+package com.example.demo.jdbc;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+@Service
+public class ItemService implements ItemServiceIface {
+	@Autowired
+	JdbcTemplate jdbctemplate;
+	public  String addItem(Item item) {
+		try {
+		String sql="insert into item values(?,?,?,?)";
+		System.out.println(item.getId());
+		int i=jdbctemplate.update(sql,item.getId(),item.getIname(),item.getIdes(),item.getPrice());
+		if(i>0)
+			return "Record Inserted successfully";
+		else
+			return "Record is not inserted";
+		}
+		catch(Exception e) {
+			return " "+e;
+		}
+	}
+
+	@Override
+	public String updateItem(Item item) {
+		String sql="update item set iname=? where id=?";
+		int i=jdbctemplate.update(sql,item.getIname(),item.getId());
+		if(i>0) {
+			return "record updated";
+			
+		}
+		else {
+			return "record not updated";
+		}
+		
+	}
+
+	@Override
+	public String deleteItems(Item item) {
+		String sql="delete from item where id=?";
+		int i=jdbctemplate.update(sql,item.getId());
+		if(i>0) {
+			return "record deleted";
+		}
+		else {
+			return "record not delted";
+		}
+	}
+
+	@Override
+	public String getItem(Item item) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getItems() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

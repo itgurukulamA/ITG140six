@@ -1,0 +1,18 @@
+package com.example.demo.Maths;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class OperationsController {
+	@Autowired OperationsService os;
+	@PostMapping
+	public int addition(@RequestBody Operations obj){
+		return os.add(obj);
+		
+	}
+	
+
+}
