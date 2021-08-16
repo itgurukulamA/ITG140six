@@ -1,0 +1,18 @@
+package com.example.demo.test;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TestService {
+	@Autowired
+	public int addition(Test t)
+	{
+		int p1=t.getA();
+		int p2=t.getB();
+		return p1+p2;
+		//return t.getA()+t.getB();
+	}
+	
+
+}
