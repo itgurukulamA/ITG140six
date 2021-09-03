@@ -1,0 +1,20 @@
+09-02-2021 16:00:33 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:00:46 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:00:49 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:01:12 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:02:35 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:02:41 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:03:05 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:04:02 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:10:32 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:12:03 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:12:15 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:16:57 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:17:24 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:32:19 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:32:28 DEBUG o.s.jdbc.core.JdbcTemplate (958) : Executing prepared SQL update
+09-02-2021 16:32:28 DEBUG o.s.jdbc.core.JdbcTemplate (643) : Executing prepared SQL statement [update item set item_name=? where item_id=?]
+09-02-2021 16:32:28 DEBUG o.s.jdbc.datasource.DataSourceUtils (115) : Fetching JDBC Connection from DataSource
+09-02-2021 16:32:28 TRACE o.s.jdbc.core.StatementCreatorUtils (221) : Setting SQL statement parameter value: column index 1, parameter value [laptops], value class [java.lang.String], SQL type unknown
+09-02-2021 16:32:28 TRACE o.s.jdbc.core.StatementCreatorUtils (221) : Setting SQL statement parameter value: column index 2, parameter value [10], value class [java.lang.Integer], SQL type unknown
+09-02-2021 16:32:28 TRACE o.s.jdbc.core.JdbcTemplate (967) : SQL update affected 1 rows
